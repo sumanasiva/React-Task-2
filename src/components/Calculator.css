@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #4ba6e2, #22c264);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.upper-section {
+  width: 100%;
+  background: rgb(7, 7, 106);
+  border-radius: 30px 30px 2px 2px;
+  position: relative;
+}
+.white-circle {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 100%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+.moon-and-circle {
+  position: absolute;
+  top: 5%;
+  left: 19%;
+  display: flex;
+  flex-direction: row;
+}
+
+.moon {
+  width: 20px;
+  height: 20px;
+  background: conic-gradient(#fffdd0 50%, transparent 0);
+  border-radius: 50%;
+  transform: rotate(40deg);
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  background: #92afb7;
+  border-radius: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
+  z-index: 2;
+  position: relative;
+  transform: rotate(-70deg);
+}
+
+.lower-section {
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  border-radius: 2px 2px 30px 30px;
+}
+@media screen and (max-width: 768px) {
+  .white-circle,
+  .moon,
+  .circle {
+    width: 20px;
+    height: 20px;
+  }
+}
+.calculator {
+  width: 300px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.display {
+  color: white;
+  font-size: 24px;
+  text-align: right;
+  padding: 100px;
+  padding-right: 20px;
+  border-radius: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.button-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+button {
+  background: black;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1px;
+}
+
+button:hover {
+  background: #333;
+}
+
+button:active {
+  background: #555;
+}
